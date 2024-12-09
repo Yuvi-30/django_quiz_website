@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'registercss.css' %}">
+<h1>Register Page</h1>
+
+<style>
+    h4{
+        color: red;
+    }
+</style>
+
+   
+
+<form action="register" method="POST">
+    {% csrf_token %}
+
+    <p>Username</p>
+    <input type="text" name="username">
+    <br><br>
+    <p>Email</p>
+    <input type="email" name="email">
+    <br><br>
+    <p>Password</p>
+    <input type="password" name="password">
+    <br><br>
+    <p>Renter password</p>
+    <input type="password" name="password2">
+    <br><br>
+    <input type="submit" name="submit">
+    {% for message in messages %}
+    <h4>{{message}}</h4>
+    {% endfor %}
+
+</form>

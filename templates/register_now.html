@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Quizz</title>
+    <link rel="stylesheet" href="{% static 'homepage.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome-message">Welcome to Quizz!</h1>
+        <div class="button-container">
+            <a href="register" class="button register">Register</a>
+            <a href="login" class="button login">Login</a>
+            
+        </div><br><br>
+        <p>Or maybe checkout the website</p><br>
+            <a href="index" class="button register">Be a Guest</a>
+    </div>
+</body>
+</html>

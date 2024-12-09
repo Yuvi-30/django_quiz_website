@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'logincss.css' %}">
+<h1>Login Here</h1>
+
+<style>
+    h4 {
+        color: red;
+    }
+</style>
+
+
+
+<form action="login" method="POST">
+    {% csrf_token %}
+    
+    <p>username</p>
+    <input type="text" name="username">
+    <br><br>
+    <p>password</p>
+    <input type="password" name="password">
+    <br><br>
+    <input type="submit" name="submit">
+    <br><br>
+    {% for message in messages %}
+    <h4>{{message}}</h4>
+    {% endfor %}
+</form>
+
+<form method="GET" action="register">
+    <button type="submit">Register</button>
+
+</form>
